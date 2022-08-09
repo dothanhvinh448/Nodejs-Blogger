@@ -1,0 +1,35 @@
+<% include layout/header.ejs %> 
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/contact-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Contact Me</h1>
+            <span class="subheading">Have questions? I have answers.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <form action="/dangnhap" method="post" >
+    <div class="control-group">
+     <div class="form-group ">
+      <input type="email" style="height:70px; width: 40%; margin:auto" name="email" class="form-control" placeholder="Email">
+     </div>
+    </div>
+    <br>
+    <div class="control-group">
+     <div class="form-group ">
+       <input type="password" style="height:70px; width: 40%; margin:auto" name="password" class="form-control" placeholder="Password">
+     </div>
+    </div>
+    <div class="control-group text-center my-4">
+     <button type="submit" class="btn btn-primary ">Login</button>
+    </div>
+   </form>
+  
+    <% include layout/footer.ejs %> 

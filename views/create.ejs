@@ -1,0 +1,60 @@
+     
+           <% include layout/header.ejs %> 
+           
+           <header class="masthead" style="background-image: url('img/contact-bg.jpg')">
+            <div class="overlay"></div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                  <div class="site-heading">
+                    <h1>Create Post</h1>
+                    <span class="subheading">Bạn muốn tạo một bài viết mới không?</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-md-10 mx-auto">        
+                <form method="post" action="/them" novalidate enctype="multipart/form-data">
+                  <div class="control-group">
+                    <div class="form-group floating-label-form-group controls"> <label>Tác giả</label>
+                      <input name="username" type="text" class="form-control" placeholder="Tác giả" required data-validation-required-message="Nhập tên tác giả">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="form-group floating-label-form-group controls"> <label>Tiêu đề</label>
+                      <input name="title" type="text" class="form-control" placeholder="Tiêu đề" required data-validation-required-message="Vui lòng nhập tiêu đề">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="form-group floating-label-form-group controls"> <label>Tiêu đề phụ</label>
+                      <input name="subtitle"  type="text" class="form-control" placeholder="Tiêu đề phụ" required data-validation-required-message="Vui lòng nhập tiêu đề phụ">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="form-group floating-label-form-group controls"> <label>Nội dung</label>
+                      <textarea name="content"  rows="5" class="form-control" placeholder="Nội dung" id="message" required data-validation-required-message="Vui lòng nhập nội dung">
+                      </textarea> <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="form-group floating-label-form-group controls"> <label>Hình ảnh</label>
+                      <input name="image" type="file" class="form-control" required>
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <br> <div id="success"></div>
+                  <button type="submit" class="btn btn-primary" id="sendMessageButton">Create Post</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        <br><br>
+             
+
+                <% include layout/footer.ejs %> 
